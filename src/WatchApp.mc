@@ -25,7 +25,7 @@ public class WatchApp extends App.AppBase {
     }
 
     // fetches the complication when it changes, and passes to the Watchface
-    function onComplicationUpdated(complicationId) {
+    function onComplicationUpdated(complicationId as Complications.Id) as Void {
         if (WatchView != null) {
             try {
                 WatchView.updateComplication(complicationId);
